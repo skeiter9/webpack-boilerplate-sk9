@@ -1,8 +1,6 @@
 var express = require('express');
 var path = require('path');
-var httpProxy = require('http-proxy');
 
-var proxy = httpProxy.createProxyServer();
 var app = express();
 
 var publicDir = path.resolve(__dirname, '../public');
@@ -12,6 +10,8 @@ var port = isProduction ? 8080 : 3000;
 app.use(express.static(publicDir));
 
 if (!isProduction) {
+  var httpProxy = require('http-proxy');
+  var proxy = httpProxy.createProxyServer();
 
   var bundle = require('./webpack-dev-server.js');
   bundle();
@@ -19,6 +19,11 @@ if (!isProduction) {
     proxy.web(req, res, {
       target: 'http://localhost:8080'
     })
+  });
+
+  proxy.on('error', function(e) {
+    console.log('Could not connect to proxy, please try again...');
+
   });
   /*
   var webpackDevMiddleware = require('webpack-dev-middleware');
@@ -51,10 +56,6 @@ if (!isProduction) {
   });
   */
 }
-
-proxy.on('error', function(e) {
-  console.log('Could not connect to proxy, please try again...');
-});
 
 app.listen(port, function() {
   console.log('server is running on port ' + port);

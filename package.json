@@ -1,5 +1,5 @@
 {
-  "name": "tedhis",
+  "name": "webpack-boilerplate-sk9",
   "version": "0.2.0",
   "engines" : {
     "node" : ">=0.10"
@@ -7,6 +7,7 @@
   "scripts": {
     "clean": "rm -rf public/build",
     "webpack": "npm run clean && node_modules/.bin/webpack --config webpack.config.js --progress --color",
+    "webpack-dev-server": "npm run clean && STANDALONE=1 node_modules/.bin/nodemon server/webpack-dev-server.js",
     "build": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color",
     "deploy": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color && NODE_ENV=production node_modules/.bin/nodemon server/server.js",
     "start": "npm run clean && node_modules/.bin/nodemon server/server.js"
