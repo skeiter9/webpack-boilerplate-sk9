@@ -1,0 +1,34 @@
+{
+  "name": "tedhis",
+  "version": "0.2.0",
+  "engines" : {
+    "node" : ">=0.10"
+  },
+  "scripts": {
+    "clean": "rm -rf public/build",
+    "webpack": "npm run clean && node_modules/.bin/webpack --config webpack.config.js --progress --color",
+    "build": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color",
+    "deploy": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color && NODE_ENV=production node_modules/.bin/nodemon server/server.js",
+    "start": "npm run clean && node_modules/.bin/nodemon server/server.js"
+  },
+  "devDependencies": {
+    "webpack": "^1.8.10",
+    "babel-core": "^5.1.13",
+    "babel-loader": "^5.0.0",
+    "css-loader": "^0.10.1",
+    "express": "^4.12.3",
+    "http-proxy": "^1.11.1",
+    "jade": "^1.9.2",
+    "jade-loader": "^0.7.1",
+    "jscs": "^1.13.0",
+    "jscs-loader": "0.0.5",
+    "ng-annotate-loader": "0.0.2",
+    "nodemon": "^1.3.7",
+    "sass-loader": "^0.6.0",
+    "style-loader": "^0.10.1",
+    "stylus-loader": "^1.1.0",
+    "url-loader": "^0.5.5",
+    "webpack-dev-middleware": "^1.0.11",
+    "webpack-dev-server": "^1.8.0"
+  }
+}

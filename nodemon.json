@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "ignore": [".sass-cache", ".git", "app", "node_modules", "bower_components"],
+  "watch": ["server", "webpack.config.js"],
+  "ext": "js json html"
+}
