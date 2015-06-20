@@ -24,7 +24,7 @@ var config = {
     app: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:' +
-      (process.env.PORT || 8081),
+      (process.env.WDS || 3051),
       './app'
     ]
   },
