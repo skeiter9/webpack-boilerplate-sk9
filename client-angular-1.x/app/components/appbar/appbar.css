@@ -1,0 +1,16 @@
+@import '../../layout/styles/_variables.css';
+@import '../../layout/styles/_alias.css';
+
+h1 {
+  font-size: 16px;
+  align-self: center;
+  font-weight: 400;
+}
+
+wagon-appbar {
+  background-color: var(--primaryColor);
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}

@@ -1,43 +1,27 @@
 {
-  "name": "webpack-boilerplate-sk9",
-  "version": "0.3.0",
-  "engines": {
-    "node": ">=0.10"
-  },
+  "name": "webpack-placeholder-sk9",
+  "version": "0.4.0",
+  "main": "server/server.js",
   "scripts": {
-    "clean": "rm -rf build",
-    "webpack": "npm run clean && node_modules/.bin/webpack --config webpack.config.js --progress --color",
-    "webpack-dev-server": "npm run clean && STANDALONE=1 node_modules/.bin/nodemon server/webpack-dev-server.js",
-    "build": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color",
-    "deploy": "npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color && NODE_ENV=production node_modules/.bin/nodemon server/server.js",
-    "start": "npm run clean && node_modules/.bin/nodemon server/server.js",
-    "webpack-stats": "BUILD_DEPLOY=1 node_modules/.bin/webpack --config webpack.config.js -p --profile --json > stats.json",
-    "webpack-analyse": "npm run webpack-stats && node_modules/.bin/webpack-dev-server --content-base node_modules/webpack-analyse/dist --port 3052",
-    "postinstall": "bower install && node_modules/.bin/grunt --gruntfile node_modules/webpack-analyse/Gruntfile.js"
-  },
-  "devDependencies": {
-    "webpack": "^1.8.10",
-    "babel-core": "^5.1.13",
-    "babel-loader": "^5.0.0",
-    "css-loader": "^0.10.1",
-    "express": "^4.12.3",
-    "http-proxy": "^1.11.1",
-    "jade": "^1.9.2",
-    "jade-loader": "^0.7.1",
-    "jscs": "^1.13.0",
-    "jscs-loader": "0.0.5",
-    "nodemon": "^1.3.7",
-    "sass-loader": "^0.6.0",
-    "style-loader": "^0.10.1",
-    "stylus-loader": "^1.1.0",
-    "url-loader": "^0.5.5",
-    "source-map-loader": "^0.1.5",
-    "webpack-dev-middleware": "^1.0.11",
-    "webpack-dev-server": "^1.8.0"
+    "start": "node server/server.js",
+    "postinstall": "cd client && npm install"
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^0.8.2",
-    "grunt-cli": "^0.1.13",
-    "webpack-analyse": "git://github.com/webpack/analyse"
-  }
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.1",
+    "jshint": "^2.5.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skeiter9/webpack-boilerplate-sk9"
+  },
+  "description": "webpack boilerplate for react, angular 1.x"
 }

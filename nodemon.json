@@ -1,6 +1,6 @@
 {
-  "verbose": true,
-  "ignore": [".sass-cache", ".git", "src", "node_modules", "bower_components"],
-  "watch": ["server", "webpack.config.js", "public"],
-  "ext": "js json html"
+    "verbose": true,
+    "watch": ["server/**"],
+    "ignore": ["node_modules/**"],
+    "delay": 2
 }

@@ -1,0 +1,31 @@
+.btnSmall {
+  display: block;
+  width: auto;
+  padding: 8px 32px;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btnLarge {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btnFab {
+  display: block;
+  padding: 8px;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+wagon-splash {
+  display: block;
+  text-align: center;
+  margin: 16px auto;
+}

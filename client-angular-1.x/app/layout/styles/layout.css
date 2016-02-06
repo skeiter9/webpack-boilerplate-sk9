@@ -1,0 +1,19 @@
+@import '_variables.css';
+
+@import '_reset.css';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@import '_base.css';
+
+/*
+.e404__box {
+  @nest & span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    @nest &:first-of-type {
+      font-size: 32px;
+    }
+  }
+}
+*/

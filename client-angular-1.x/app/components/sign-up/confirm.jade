@@ -1,0 +1,4 @@
+form(name='form' novalidate)
+  label We sent a 4 digit verification code to 555-555-5555. enter it below
+  input(required name='phone' type='number' ng-pattern='"[0-9]{4}"' ng-model='confirm.phone')
+  button(ng-click='confirm.send(form)') SUBMIT

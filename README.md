@@ -1,64 +1,32 @@
-#My Webpack-boilerplate
+# BoilerPlate webpack for angular 1.5 & React
 
-Simple boilerplate for bootstrap a new project with webpack
+## For Angular 1.5
 
-## Requirements
+First get into client-angular-1.x directory then you can
+chose these options:
 
-- node >0.10
+### Initialize development server
 
-## Options
+```
+npm start
+```
 
+### Initialize tests
 
-### Run a development server
+For unite test using tap test framework and karma server
 
-    npm start
+```
+npm run test
+```
 
-It's equivalent:
-> $ npm run clean && node_modules/.bin/nodemon server/server.js
+## For React
 
-- Execute webpack and storage bundle files in memory(fast mode)
+First get into client-react directory then you can
+chose these options:
 
-- Enable Hot Replacement module(Livereload)
+### Initialize development server
 
-- Run a express server in 3000 port
+```
+npm start
+```
 
-### Run a production server*
-
-    npm run deploy
-
-> npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color && NODE_ENV=production node_modules/.bin/nodemon server/server.js"
-
-- Execute webpack in production mode, storage files in public/build
-
-- (*) Run a express server in 8080
-
-### Run only webpack-dev-server
-
-    npm run webpack-dev-server
-
-> npm run clean && STANDALONE=1 node_modules/.bin/nodemon server/webpack-dev-server.js
-
-- Execute webpack for development mode, storage bundled files in memory(fast)
-
-- Run a webpack-dev-server(express + webpack-dev-middleware) server in 8080
-
-### Eliminate build directory in public
-
-    npm run clean
-
-It's equivalent :
-> $ rm -rf public/build,
-
-### Execute only webpack for development stage
-
-    npm run webpack
-
-It's equivalent:
-> $ npm run clean && node_modules/.bin/webpack --config webpack.config.js --progress --color
-
-### Execute webpack for production stage
-
-npm run build
-
-It's equivalent:
-> $ npm run clean && BUILD_DEPLOY=1 node_modules/.bin/webpack -p --config webpack.config.js --progress --color"

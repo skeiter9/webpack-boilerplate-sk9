@@ -1,0 +1,31 @@
+.container {
+  composes: bgFallback displayBlock from '../../layout/styles/_placeholders.css';
+  padding-top: 16px;
+}
+
+.section {
+  composes: listItem from '../../layout/styles/_placeholders.css';
+}
+
+.sectionRight {
+  composes: bgPrimary from '../../layout/styles/_placeholders.css';
+  background-image: url('../../layout/assets/images/bg-car.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-top: 16px;
+  padding-top: 24px;
+}
+
+.sectionRightItem {
+  composes: section;
+  justify-content: flex-end;
+  color: #fff;
+  @nest & span:first-of-type {
+    color: rgba(255, 255, 255, 0.65);
+    margin-right: 16px;
+  }
+}
+
+.avatar {
+  composes: avatar from '../../layout/styles/_placeholders.css';
+}
