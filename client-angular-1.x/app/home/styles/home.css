@@ -1,0 +1,22 @@
+.hContainer {
+  display: block;
+  composes: container from '../../layout/styles/_placeholders.css';
+}
+
+.hOptions {
+  width: 90%;
+  margin: 0 auto;
+  @nest & a:first-of-type {
+    margin-bottom: 8px;
+  }
+}
+
+.hSignUp {
+  composes: btnLarge from '../../layout/styles/components/_btn.css';
+  composes: bgAccent from '../../layout/styles/_placeholders.css';
+}
+
+.hSignIn {
+  composes: btnLarge from '../../layout/styles/components/_btn.css';
+  composes: bgFallback from '../../layout/styles/_placeholders.css';
+}

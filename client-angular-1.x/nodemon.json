@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "watch": ["dev-server/server.js", "webpack.config.js", "karma.conf.js"],
+    "ignore": ["node_modules/**"],
+    "delay": 0.5
+}

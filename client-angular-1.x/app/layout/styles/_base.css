@@ -1,0 +1,14 @@
+body {
+  background-color: var(--primaryColor);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.25;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+}
