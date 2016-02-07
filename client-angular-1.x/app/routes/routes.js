@@ -3,17 +3,14 @@ import uiRouter from 'angular-ui-router';
 
 import homeModule from '../home/home.js';
 import layoutModule from '../layout/layout.js';
-import dashboardModule from '../dashboard/dashboard.js';
 
 import {homeRoutes, homeRules} from '../home/home.routes.js';
-import {dashboardRoutes, dashboardRules} from '../dashboard/dashboard.routes.js';
 import {layoutRoutes} from '../layout/layout.routes.js';
 
 export default angular.module('appRoutes', [
   'ui.router',
   layoutModule.name,
-  homeModule.name,
-  dashboardModule.name
+  homeModule.name
 ])
 
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
@@ -27,7 +24,6 @@ export default angular.module('appRoutes', [
     homeRules($uRP);
 
     homeRoutes($sP);
-    dashboardRoutes($sP);
     layoutRoutes($sP);
 
     $sP

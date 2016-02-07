@@ -1,6 +1,5 @@
 export const homeRules = ($uRP) => {
 
-  //$uRP.when('/', '/');
   $uRP
 
   .rule(($injector, $location) => {
@@ -31,73 +30,9 @@ export const homeRoutes = ($sP) => {
       },
       views: {
         content: {
-          template: '<wagon-home-page />'
+          template: '<h1>webpack boilerplate</h1>'
         }
       }
-    })
-
-    .state('signUp', {
-      parent: 'layout',
-      url: '/sign-up',
-      resolve: {
-        r: ['$q', 'layout', ($q, l) => {
-          l.hideAppbar = false;
-          l.hideSearch = true;
-          l.leftIconName = 'back';
-          l.title = '';
-          return $q.when();
-        }]
-      },
-      views: {
-        content: {
-          template: '<wagon-sign-up></wagon-sign-up>',
-          controller: ['layout', '$state', function(l, $st) {
-
-            l.leftIconFn = () => {
-              if (angular.isObject($st.current.data) &&
-                angular.isString($st.current.data.prevState.name) &&
-                (
-                  $st.current.data.prevState.name !== '' ||
-                  $st.current.data.prevState.name === ''
-                )
-              ) $st.go('home');
-            };
-
-          }]
-        }
-      }
-    })
-
-    .state('confirm', {
-      parent: 'layout',
-      url: '/confirm',
-      resolve: {
-        r: ['$q', 'layout', ($q, l) => {
-          l.hideAppbar = false;
-          l.hideSearch = true;
-          l.leftIconName = 'back';
-          l.title = '';
-          return $q.when();
-        }]
-      },
-      views: {
-        content: {
-          template: '<wagon-confirm></wagon-confirm>',
-          controller: ['layout', '$state', function(l, $st) {
-
-            l.leftIconFn = () => {
-              if (angular.isObject($st.current.data) &&
-                angular.isString($st.current.data.prevState.name) &&
-                (
-                  $st.current.data.prevState.name !== '' ||
-                  $st.current.data.prevState.name === ''
-                )
-              ) $st.go('dashboard');
-            };
-
-          }]
-        }
-      }
-    })
+    });
 
 };

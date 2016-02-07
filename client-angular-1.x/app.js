@@ -4,6 +4,7 @@ import oclazyload from 'oclazyload';
 
 {
   window.addEventListener('load', () => {
-    window.app = angular.bootstrap(document.body, [app.name, 'oc.lazyLoad'], {strictDi: true});
+    window.app = angular
+      .bootstrap(document.getElementById('root'), [app.name, 'oc.lazyLoad'], {strictDi: true});
   });
 }

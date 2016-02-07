@@ -32,7 +32,7 @@ export default angular.module('wagonlayout', [
   }])
 
   .service('layout', [function() {
-    this.title = 'wagon';
+    this.title = 'webpack boilerplate';
   }])
 
   .controller('LayoutController', ['layout', function(l) {
