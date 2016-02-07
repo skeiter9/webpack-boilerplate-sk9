@@ -1,24 +1,6 @@
 {
   "name": "webpack-placeholder-sk9",
   "version": "0.4.0",
-  "main": "server/server.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "postinstall": "cd client && npm install"
-  },
-  "dependencies": {
-    "compression": "^1.0.3",
-    "cors": "^2.5.2",
-    "loopback": "^2.22.0",
-    "loopback-boot": "^2.6.5",
-    "loopback-component-explorer": "^2.1.0",
-    "loopback-datasource-juggler": "^2.39.0",
-    "serve-favicon": "^2.0.1"
-  },
-  "devDependencies": {
-    "babel-loader": "^6.2.1",
-    "jshint": "^2.5.6"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/skeiter9/webpack-boilerplate-sk9"

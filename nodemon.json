@@ -1,6 +1,0 @@
-{
-    "verbose": true,
-    "watch": ["server/**"],
-    "ignore": ["node_modules/**"],
-    "delay": 2
-}
