@@ -1,6 +1,6 @@
-# BoilerPlate webpack for angular 1.5 & React
+# BoilerPlate webpack for angular 1.x & React
 
-## For Angular 1.5
+## For Angular 1.x
 
 First get into client-angular-1.x directory then you can
 chose these options:

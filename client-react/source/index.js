@@ -6,7 +6,7 @@ const App = createApp(React);
 
 const props = {
   foo: 'content of the app',
-  title: 'wagon app',
+  title: 'webpack boilerplate',
   helloClass: 'hello'
 };
 
